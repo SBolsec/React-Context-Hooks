@@ -1,12 +1,27 @@
-import React from 'react';
+import React, { useState } from 'react';
+import {v4} from 'uuid';
 
 const SongList = () => {
+    const [songs, setSongs] = useState([
+        { title: 'Almost home', id: 1},
+        { title: 'Memory gospel', id: 2},
+        { title: 'This wild darkness', id: 3},
+    ]);
+
+    const addSong = () => {
+        setSongs([...songs, { title: 'new song', id: v4() }]);
+    }
+
     return (
         <div className="song-list">
             <ul>
-                <li>This wild darkness</li>
-                <li>Memory gospel</li>
+                {songs.map(song => {
+                    return (
+                        <li key={song.id}>{song.title}</li>
+                    );
+                })}
             </ul>
+            <button onClick={addSong}>Add a song</button>
         </div>
     );
 }
