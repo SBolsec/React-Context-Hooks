@@ -24,13 +24,13 @@ const BookList = () => {
 
     return (
         <div className="book-list" style={{ color: theme.syntax, background: theme.bg }}>
-                <ul>
-                    <li style={{ background: theme.ui }}>The way of king</li>
-                    <li style={{ background: theme.ui }}>The name of the wind</li>
-                    <li style={{ background: theme.ui }}>The final empire</li>
-                </ul>
-            </div>
+            <ul>
+                <li style={{ background: theme.ui }}>The way of king</li>
+                <li style={{ background: theme.ui }}>The name of the wind</li>
+                <li style={{ background: theme.ui }}>The final empire</li>
+            </ul>
+        </div>
     );
 }
- 
+
 export default BookList;
